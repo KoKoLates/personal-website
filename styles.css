@@ -1,0 +1,100 @@
+body {
+    color: #664b34;
+    font-family: arial;
+    background-image: url(./img/background.png);
+    background-repeat: no-repeat;
+    background-position: left - top;
+    background-size: contain;
+    background-color: #f3f3f3;
+}
+
+img.koko {
+    width: 150px;
+    border-radius: 75px;
+    float: top;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+a {
+    color: #664b34;
+}
+
+a:hover {
+    color: #bb3e03;
+}
+
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: #1e1e1e;
+    margin-left: 40px;
+    font-size: 40px;
+}
+
+h3 {
+    color: #664b34;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+p {
+    color: #664b34;
+    font-family: 'Ubuntu', sans-serif;
+    width: 550px;
+    margin-left: 40px;
+    line-height: 1.5;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-250px * 10 - 110px));
+    }
+}
+
+.slider {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(250px * 18);
+}
+
+.slider .slide{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    perspective: 100px;
+}
+
+.slider img{
+    transition: transform 1s;
+}
+
+.slider img:hover{
+    transform: translatez(10px);
+}
+
+.slider .slide-track:hover{
+    animation-play-state: paused;
+}
+
+.buttom {
+    font-size: 10px;
+}
