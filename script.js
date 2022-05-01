@@ -14,19 +14,30 @@ function displayDate(){
     document.getElementById("time").textContent = `${MM}-${DD}-${YY} ${hh}:${mm}:${ss}`;
 }
 
+console.log("loop: " + music.loop);
+console.log("muted: " + music.muted);
 setInterval(displayDate, 1000);
+var play = false;
 var flag = true;
 function button(){
+    if (play == false){
+        music.play();
+        music.volume = 0.05;
+        play = true;
+        console.log("play: " + play);
+    }
+
     if (flag == true){
         document.getElementById("button").innerHTML = "<img src='./img/sound.png' width='35px'>";
         music.muted = false;
-        music.volume = 0.05;
         flag = false;
+        console.log("muted: " + music.muted);
     }
     else{
         document.getElementById("button").innerHTML = "<img src='./img/mute.png' width='35px'>";
         flag = true;
         music.muted = true;
+        console.log("muted: " + music.muted);
     }
 }
 
