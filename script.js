@@ -1,4 +1,4 @@
-function musicPlay(){
+function volume(){
     var video = document.getElementById("music");
     video.volume = 0.05;
 }
@@ -20,4 +20,8 @@ function displayDate(){
 }
 
 setInterval(displayDate, 1000);
-musicPlay();
+let msg = confirm('Website would like to use your sounds.');
+if (msg){
+    music.play();
+    volume();
+}
