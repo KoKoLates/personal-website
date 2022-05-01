@@ -88,12 +88,30 @@ p {
 
 .slider img:hover{
     transform: translatez(10px);
+    cursor: pointer;
 }
 
 .slider .slide-track:hover{
     animation-play-state: paused;
 }
 
-.buttom {
+.bottom {
     font-size: 10px;
+}
+
+.bar {
+    overflow: hidden;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+button {
+    float: left;
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
 }

@@ -1,8 +1,3 @@
-function volume(){
-    var video = document.getElementById("music");
-    video.volume = 0.05;
-}
-
 function displayDate(){
     var dateToday = new Date();
     let addZero = (num) =>{
@@ -20,8 +15,18 @@ function displayDate(){
 }
 
 setInterval(displayDate, 1000);
-let msg = confirm('Website would like to use your sounds.');
-if (msg){
-    music.play();
-    volume();
+var flag = true;
+function button(){
+    if (flag == true){
+        document.getElementById("button").innerHTML = "<img src='./img/sound.png' width='35px'>";
+        music.muted = false;
+        music.volume = 0.05;
+        flag = false;
+    }
+    else{
+        document.getElementById("button").innerHTML = "<img src='./img/mute.png' width='35px'>";
+        flag = true;
+        music.muted = true;
+    }
 }
+
